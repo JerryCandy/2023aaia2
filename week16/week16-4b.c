@@ -1,7 +1,11 @@
 #include <stdio.h>
+#include <string.h>
 int main(){
-	int a[100];
-	int n;
-	scanf("%d",&n);
-	printf("%d",n/1000%10);
+	char line[100];
+	scanf("%s",line);
+	int N = strlen(line);
+	for(int i=0;i<N;i++){
+		printf("%c",line[i]);
+		if((N-1-i)%3==0 && i!=N-1) printf(",");
+	}
 }
